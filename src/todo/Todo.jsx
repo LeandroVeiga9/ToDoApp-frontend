@@ -27,7 +27,7 @@ export default class Todo extends Component {
 
     refresh(description = ''){
         const search = description ? `&description__regex=/${description}/` : ''
-        Axios.get(`${URL}?sort=-createdAd${search}`).then(resp => this.setState({...this.state, description, list: resp.data}))
+        Axios.get(`${URL}?sort=-createdAt${search}`).then(resp => this.setState({...this.state, description, list: resp.data}))
     }
 
     handleSearch(){
